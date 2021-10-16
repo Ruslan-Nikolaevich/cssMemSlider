@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 75%;
+  
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background: rgb(48, 46, 46);
+    border-radius: 1%;
+}
+.wrapper{
+    max-width: 960px;
+    height: 70vh;
+    margin: 0 auto;
+
+}
+
+.container { 
+    width: 100%;
+    height: 100%;
+    position: relative;
+	text-align: center;
+    /* border: red 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.slides-wrapper{
+    width: 100%;
+    height: 100%;
+    border: blue 1px solid;
+    overflow: hidden;
+    border-radius: 1.5%;
+}
+.slider-length{ 
+	width: 500%;
+    display: flex;
+	float: left;
+}
+.content-slider{
+    width: 20%;
+    overflow: hidden;
+   
+}
+
+
+.overflow{ 
+	width: 100%;
+	overflow: hidden;
+}
+
+img{ 
+	max-width: 100%;
+   
+}
+
+.text-wrapper{
+    width: 50%;
+  
+    margin-top: 30px;
+}
+.text-length{ 
+	width: 500%;
+    display: flex;
+	float: left;
+}
+.text-slider{
+    width: 20%;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+
+
+input{ 
+	display: none;
+}
+
+/*Анимация картинки*/
+#switch1:checked ~ .slides-wrapper .overflow .slider-length{
+	margin-left: 0;
+}
+#switch1:checked ~ .text-wrapper .overflow .text-length{
+	margin-left: 0;
+}
+
+#switch2:checked ~ .slides-wrapper .overflow .slider-length{
+	margin-left: -100%;
+}
+#switch2:checked ~ .text-wrapper .overflow .text-length{
+	margin-left: -100%;
+}
+#switch3:checked ~ .slides-wrapper .overflow .slider-length{
+	margin-left: -200%;
+}
+#switch3:checked ~ .text-wrapper .overflow .text-length{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ .slides-wrapper .overflow .slider-length{
+	margin-left: -300%;
+}
+#switch4:checked ~ .text-wrapper .overflow .text-length{
+	margin-left: -300%;
+}
+#switch5:checked ~ .slides-wrapper .overflow .slider-length{
+	margin-left: -400%;
+}
+#switch5:checked ~ .text-wrapper .overflow .text-length{
+	margin-left: -400%;
+}
+
+/*Декорации input*/
+label{ 
+	cursor: pointer;
+}
+.active label{ 
+	border-radius: 50%; 
+	display: inline-block; 
+	width: 20px;
+	height: 20px;
+	background: #0890eb;
+}
+
+.active{ 
+    width: 15%;
+    margin-top: -2%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    border:  1px solid black;
+   
+}
+
+.active label:hover{ 
+	background: white;
+}
+
+/*цвет активного чекбокса*/
+#switch1:checked ~ .active label:nth-child(1),
+#switch2:checked ~ .active label:nth-child(2),
+#switch3:checked ~ .active label:nth-child(3),
+#switch4:checked ~ .active label:nth-child(4),
+#switch5:checked ~ .active label:nth-child(5){
+	background: none;
+    border: 2px solid white;
+
+	/* border-color: #18a3dd !important; */
+}
+
+
+.slider-length{ /*анимация слайдера*/
+	transition: all 0.5s ease-in-out;
+}
+.text-length{ /*анимация текста*/
+	transition: all 0.5s ease-in-out;
+}
