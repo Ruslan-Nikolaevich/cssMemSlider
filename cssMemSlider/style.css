@@ -121,18 +121,23 @@ input{
 
 /*Декорации input*/
 label{ 
+    text-align: center;
+    /* padding: 10px; */
 	cursor: pointer;
+    border: 10px solid rgb(48, 46, 46);
+    
 }
 .active label{ 
 	border-radius: 50%; 
 	display: inline-block; 
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	background: #0890eb;
+    /* padding: 10px; */
 }
 
 .active{ 
-    width: 15%;
+    width: 27%;
     margin-top: -2%;
     display: flex;
     justify-content: space-between;
@@ -142,7 +147,9 @@ label{
 }
 
 .active label:hover{ 
+   
 	background: white;
+    
 }
 
 /*цвет активного чекбокса*/
@@ -151,8 +158,15 @@ label{
 #switch3:checked ~ .active label:nth-child(3),
 #switch4:checked ~ .active label:nth-child(4),
 #switch5:checked ~ .active label:nth-child(5){
-	background: none;
+    width: 20px;
+	height: 20px;
+    background: none;
     border: 2px solid white;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
 
 	/* border-color: #18a3dd !important; */
 }
@@ -166,6 +180,7 @@ label{
 }
 
 @media (max-width: 1024px){
+
     main{
         width: 100%;
     }
@@ -174,7 +189,7 @@ label{
 
 @media (max-width: 960px){
     .active{ 
-        width: 20%;
+        width: 30%;
     }
     .text-wrapper{
         width: 70%;
@@ -187,8 +202,8 @@ label{
     }
     .active{ 
         align-self: center;
-        width: 30%;
-        margin-top: -9%;
+        width: 35%;
+        margin-top: -11%;
         margin-bottom: 8%;
        
     }
@@ -203,7 +218,7 @@ label{
 
     .active{ 
         align-self: center;
-        width: 35%;
+        width: 45%;
         margin-top: -17%;
         margin-bottom: 15%;
        
