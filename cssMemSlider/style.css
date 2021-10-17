@@ -167,7 +167,8 @@ label{
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-
+    cursor: not-allowed;
+    
 	/* border-color: #18a3dd !important; */
 }
 
